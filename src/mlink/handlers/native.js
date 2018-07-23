@@ -25,11 +25,8 @@ debuggerRouter.registerHandler(function (message) {
     }
   }
   else if (payload.method === 'WxDebug.callJS' && payload.params.method === 'createInstance') {
-    let code = payload.params.args[1];
+    const code = payload.params.args[1];
     const bundleUrl = payload.params.args[2].bundleUrl || (crypto.md5(code) + '.js');
-    if (payload.params.args[2] && (payload.params.args[2]['debuggable'] === 'false' || payload.params.args[2]['debuggable'] === false)) {
-      code = crypto.obfuscate(code);
-    }
     debuggerRouter.pushMessageByChannelId('page.debugger', message.channelId, {
       method: 'WxDebug.bundleRendered',
       params: {
