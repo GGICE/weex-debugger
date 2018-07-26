@@ -3773,7 +3773,7 @@ details[open] > summary::before {
   opacity: 1;
 }
 
-@media screen and (max-width: 1134px) {
+@media screen and (max-width: 1146px) {
   #inspector {
     height: calc(100% - 56px);
   }
