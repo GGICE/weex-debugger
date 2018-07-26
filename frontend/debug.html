@@ -18,12 +18,8 @@
     <!-- debugger page -->
     <div id="debugger-page">
         <div class="header">
-            <a class="logo" href="/" title="Back to QR code."><img src="assets/images/logo.svg" alt=""></a>
+            <a class="logo simple-debugger-hide" href="/" title="Back to QR code."><img src="assets/images/logo.svg" alt=""></a>
             <div class="info-ctn">
-                <div class="column app-info-panel">
-                    <div class="line"><span>App Info</span><b id="app_info"></b></div>
-                    <div class="line"><span>SDK Version</span><b id="sdk_version"></b></div>
-                </div>
                 <div id="operate-menu">
                     <div id="debugger-menu">
                         <div class="column">
@@ -51,8 +47,6 @@
                                         </label>
                                     </div>
                                 </b></div>
-                        </div>
-                        <div class="column">
                             <div class="line middle">
                                 <span title="Set level of log">LogLevel</span><b><select id="log_level" class="selector log-level">
                                     <option value="debug">debug</option>
@@ -69,7 +63,7 @@
                                 </select></b>
                             </div>
                         </div>
-                        <div class="column">
+                        <div class="column simple-debugger-hide">
                             <div id="qrcode_btn">
                                 <span class="iconfont icon-qrcode-scan"></span>
                                 <div class="bundle_tip i18n">
@@ -87,6 +81,12 @@
                         <div id="load-data-btn" class="menu-btn load-data-btn"><span class="iconfont icon-custom-add"></span> Load</div>
                         <input id="fileInput" type="file" style="display:none;" />
                     </div>
+                </div>
+                <div class="column app-info-panel">
+                    <div class="line">
+                        <span>App Info:</span><b id="app_info"></b>
+                        <span>SDK Version:</span><b id="sdk_version"></b>
+                     </div>
                 </div>
             </div>
             <a class="page-switch-btn simple-debugger-hide">Prophet >></a>
