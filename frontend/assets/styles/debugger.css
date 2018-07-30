@@ -3791,6 +3791,10 @@ details[open] > summary::before {
   .info-ctn {
     display: none;
   }
+
+  #inspector {
+    height: 100%;
+  }
 }
 
 /*# sourceMappingURL=debugger.css.map */
